@@ -7,7 +7,7 @@ use App\Http\Controllers\Customer\OrderController;
 use App\Http\Controllers\Customer\ReviewController;
 use App\Http\Controllers\Customer\ProfileController;
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group([], function () {
     // Cart Management
     Route::get('cart', [CartController::class, 'index']); // View cart
     Route::post('cart/{product}', [CartController::class, 'store']); // Add to cart
